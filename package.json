@@ -1,7 +1,7 @@
 {
   "name": "yaml-env",
   "description": "A tool for allowing overrides in a yaml config using environment variables. Handy for containerized applications.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Andrew Lyon",
     "email": "orthecreedence@gmail.com"

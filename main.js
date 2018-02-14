@@ -16,14 +16,13 @@ exports.load = function(prefix, yaml_file) {
 	}
 
 	function walk_obj(obj, path) {
+		var whole_val = check_env(path, null);
+		if(whole_val) {
+			return JSON.parse(whole_val);
+		}
 		if(Array.isArray(obj)) {
-			var whole_array = check_env(path, null);
-			if(whole_array) {
-				obj = JSON.parse(whole_array);
-			} else {
-				for(var i = 0; i < obj.length; i++) {
-					obj[i] = walk_obj(obj[i], path.concat([i]));
-				}
+			for(var i = 0; i < obj.length; i++) {
+				obj[i] = walk_obj(obj[i], path.concat([i]));
 			}
 		} else if(obj !== null && typeof(obj) == 'object') {
 			Object.keys(obj).forEach(function(key) {
