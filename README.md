@@ -129,8 +129,7 @@ $ node config-loader.js
 ```
 ## License
 
-MIT.
+MIT. __JOY__
 
-__JOY__
 <img src="https://media.giphy.com/media/JiISVT7n55OUw/giphy.gif">
 
