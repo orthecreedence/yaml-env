@@ -99,24 +99,20 @@ $ node config-loader.js
 }
 ```
 
-Arrays can be a bit tricky since you might want to add more elements than exist
-in the default config. In this case, you can replace the entire array by giving
-it a JSON string:
+Sometimes you'll want to replace an entire object/array (this can be necessary
+if adding elements to an object or array that aren't in the yaml file). You can
+do this by passing in a JSON string:
 
 ```bash
 $ export TURTL_LARRY_PHRASES='["alright. next to me. for the rest of the walk. lets go.", "sko!"]'
+$ export TURTL_DB='{"db": "ugh"}'
 $ node config-loader.js
 {
   "server": {
     "port": 8181
   },
   "db": {
-    "host": "127.0.0.1",
-    "port": 5432,
-    "database": "turtl_db",
-    "user": "LOGIN",
-    "password": "PASSWORD",
-    "pool": 24
+    "db": "ugh"
   },
   "larry": {
     "phrases": [
@@ -127,6 +123,9 @@ $ node config-loader.js
   "loglevel": "info"
 }
 ```
+
+This works for both objects and arrays.
+
 ## License
 
 MIT. __JOY__
