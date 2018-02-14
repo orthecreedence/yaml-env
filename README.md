@@ -100,7 +100,7 @@ $ node config-loader.js
 ```
 
 Arrays can be a bit tricky since you might want to add more elements than exist
-in the default config. In this case, you can replace te entire array by giving
+in the default config. In this case, you can replace the entire array by giving
 it a JSON string:
 
 ```bash
@@ -127,4 +127,10 @@ $ node config-loader.js
   "loglevel": "info"
 }
 ```
+## License
+
+MIT.
+
+__JOY__
+<img src="https://media.giphy.com/media/JiISVT7n55OUw/giphy.gif">
 
