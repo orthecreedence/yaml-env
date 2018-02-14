@@ -18,7 +18,9 @@ exports.load = function(prefix, yaml_file) {
 	function walk_obj(obj, path) {
 		var whole_val = check_env(path, null);
 		if(whole_val) {
-			return JSON.parse(whole_val);
+			try {
+				return JSON.parse(whole_val);
+			} catch(e) {}
 		}
 		if(Array.isArray(obj)) {
 			for(var i = 0; i < obj.length; i++) {
