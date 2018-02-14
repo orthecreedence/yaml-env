@@ -35,8 +35,6 @@ exports.load = function(prefix, yaml_file) {
 		return obj;
 	}
 	config_obj = walk_obj(config_obj, []);
-	console.log('---\n'+JSON.stringify(config_obj, null, 2));
+	return config_obj;
 };
-
-exports.load('TURTL', 'c:/htdocs/turtl/server/config/config.yaml');
 
